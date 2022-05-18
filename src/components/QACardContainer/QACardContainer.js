@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QACardContainer = () => {
+const QACardContainer = ({ QA }) => {
   return <div>QACardContainer</div>;
 };
 
