@@ -1,11 +1,11 @@
 import logo from '../../logo.svg';
-import QAForm from '../QAForm/QAForm';
+import QAContainer from '../QAContainer/QAContainer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <QAForm />
+      <QAContainer />
     </div>
   );
 }

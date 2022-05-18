@@ -4,10 +4,9 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './QAForm.css';
 
-const QAForm = () => {
-  const [error, setError] = useState('');
-  const [completions, setCompletions] = useState([]);
+const QAForm = ({ setQA, QA }) => {
   const [question, setQuestion] = useState('');
+  const [error, setError] = useState(''); // need to use this error
 
   const data = {
     prompt: question,
@@ -27,7 +26,8 @@ const QAForm = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          // Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          Authorization: `Bearer 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`,
         },
         body: JSON.stringify(data),
       }
@@ -44,7 +44,7 @@ const QAForm = () => {
     try {
       const response = await postUserText();
       console.log(response);
-      setCompletions([response, ...completions]);
+      setQA([response, ...QA]);
     } catch (err) {
       setError(err);
     }
@@ -72,7 +72,7 @@ const QAForm = () => {
         className="submit-btn"
         variant="contained"
         color="success"
-        onClick={() => setUserText()}
+        onClick={setUserText}
       >
         SUBMIT
       </Button>

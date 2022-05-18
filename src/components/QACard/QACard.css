@@ -1,0 +1,10 @@
+.qa-card {
+  width: 100%;
+  border: .5px solid rgb(48, 41, 41);
+  border-radius: 3px;
+  margin-bottom: 10px
+}
+
+.display-linebreak {
+  white-space: pre-line;
+}
