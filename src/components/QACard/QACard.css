@@ -3,3 +3,7 @@
   color: red;
   background-color: purple
 }
+
+.display-linebreak {
+  white-space: pre-line;
+}
