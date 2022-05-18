@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 import './QAForm.css';
 
 const QAForm = () => {
@@ -15,13 +16,16 @@ const QAForm = () => {
     >
       <TextField
         fullWidth
-        className="submit-question-button" //TODO - do I need this?
-        label="Ask the frequently thought question here..."
+        className="question-textfield" //TODO - do I need this?
+        label="Ask your frequently thought question here..."
         id="fullWidth"
         multiline
         rows={8}
         color="success"
       />
+      <Button className="submit-btn" variant="contained" color="success">
+        SUBMIT
+      </Button>
     </Box>
   );
 };
