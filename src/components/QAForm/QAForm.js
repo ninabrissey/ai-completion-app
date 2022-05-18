@@ -1,10 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './QAForm.css';
 
 const QAForm = () => {
+  const [error, setError] = useState('');
+  const [completions, setCompletions] = useState([]);
+  const [question, setQuestion] = useState('');
+
+  const data = {
+    prompt: question,
+    max_tokens: 50,
+    temperature: 1,
+    top_p: 1,
+    n: 1,
+    stream: false,
+    logprobs: null,
+    echo: true,
+  };
+
+  const postUserText = async () => {
+    return await fetch(
+      'https://api.openai.com/v1/engines/text-curie-001/completions',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.OPENAI_SECRET}`,
+          // Authorization: `Bearer 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`,
+        },
+        body: JSON.stringify(data),
+      }
+    ).then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return Promise.reject(res.status);
+      }
+    });
+  };
+
+  const setUserText = async () => {
+    try {
+      const response = await postUserText();
+      console.log(response);
+      setCompletions([response, ...completions]);
+    } catch (err) {
+      setError(err);
+    }
+  };
+
   return (
     <Box
       className="form-container"
@@ -16,14 +62,19 @@ const QAForm = () => {
     >
       <TextField
         fullWidth
-        className="question-textfield" //TODO - do I need this?
         label="Ask your frequently thought question here..."
         id="fullWidth"
         multiline
         rows={8}
         color="success"
+        onChange={(e) => setQuestion(e.target.value)}
       />
-      <Button className="submit-btn" variant="contained" color="success">
+      <Button
+        className="submit-btn"
+        variant="contained"
+        color="success"
+        onClick={() => setUserText()}
+      >
         SUBMIT
       </Button>
     </Box>
