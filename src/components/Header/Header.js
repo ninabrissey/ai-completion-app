@@ -1,7 +1,18 @@
 import React from 'react';
+import logo from '../../ftc-logo-transparent.png';
+import './Header.css';
 
 const Header = () => {
-  return <div>Header</div>;
+  return (
+    <header>
+      <h1>Ask Your Frequently THOUGHT Questions</h1>
+      <img
+        className="logo"
+        src={logo}
+        alt="Frequently Thought Questions logo"
+      />
+    </header>
+  );
 };
 
 export default Header;
