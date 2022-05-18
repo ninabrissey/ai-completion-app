@@ -1,0 +1,10 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container .submit-btn {
+  margin-top: 10px;
+  align-self: start
+}
