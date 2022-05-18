@@ -27,6 +27,7 @@ const QAForm = ({ setQA, QA }) => {
         headers: {
           'Content-Type': 'application/json',
           // Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          Authorization: `Bearer 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`,
         },
         body: JSON.stringify(data),
       }
