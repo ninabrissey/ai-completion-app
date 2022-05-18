@@ -54,7 +54,8 @@ const QAForm = ({ setQA, QA }) => {
       className="form-container"
       sx={{
         width: '100%',
-        margin: '10%',
+        marginLeft: '10%',
+        marginRight: '10%',
         maxWidth: '80%',
       }}
     >
