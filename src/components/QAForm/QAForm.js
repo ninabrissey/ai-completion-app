@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { cleanAnswer } from '../../utils/cleaner';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -17,11 +18,10 @@ const QAForm = ({ setQA, QA }) => {
     prompt: question,
     max_tokens: 50,
     temperature: 1,
-    top_p: 1,
-    n: 1,
-    stream: false,
-    logprobs: null,
-    echo: true,
+    // top_p: 1,
+    // n: 1,
+    // stream: false,
+    // logprobs: null,
   };
 
   const postUserText = async () => {
@@ -46,9 +46,11 @@ const QAForm = ({ setQA, QA }) => {
 
   const setUserText = async () => {
     try {
-      const response = await postUserText();
-      console.log(response);
-      setQA([response, ...QA]);
+      const data = await postUserText();
+      console.log(data);
+      const newQA = cleanAnswer(data, question);
+      console.log(newQA);
+      setQA([newQA, ...QA]);
     } catch (err) {
       setError(err);
     }
