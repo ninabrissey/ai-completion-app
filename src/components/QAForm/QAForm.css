@@ -6,5 +6,6 @@
 
 .form-container .submit-btn {
   margin-top: 10px;
-  align-self: start
+  align-self: start;
+  margin-bottom: 10px
 }

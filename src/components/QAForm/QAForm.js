@@ -26,8 +26,7 @@ const QAForm = ({ setQA, QA }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
         },
         body: JSON.stringify(data),
       }
@@ -55,7 +54,8 @@ const QAForm = ({ setQA, QA }) => {
       className="form-container"
       sx={{
         width: '100%',
-        margin: '10%',
+        marginLeft: '10%',
+        marginRight: '10%',
         maxWidth: '80%',
       }}
     >

@@ -1,11 +1,21 @@
-import logo from '../../logo.svg';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import QAContainer from '../QAContainer/QAContainer';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Header />
+      <p>Are you frequently asking yourself questions...?</p>
+      <p>Well, get those questions out of your mind and onto the screen.</p>
+      <p>
+        The openAI assistant will hopefully be able to help you out in a small
+        or big way...
+      </p>
       <QAContainer />
+      <Footer />
     </div>
   );
 }
@@ -14,7 +24,6 @@ export default App;
 
 // for reference:
 // <header className="App-header">
-// <img src={logo} className="App-logo" alt="logo" />
 // <p>
 //   Edit <code>src/App.js</code> and save to reload.
 // </p>
