@@ -1,10 +1,25 @@
 .qa-card {
-  width: 80vw;
-  border: .5px solid rgb(48, 41, 41);
-  border-radius: 3px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.display-linebreak {
-  white-space: pre-line;
+.question {
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  max-width: 75%;
+  background-color: #F6F7F8;
+  align-self: start;
+  padding: 20px
 }
+
+.answer {
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-right: 10px; 
+  max-width: 75%;
+  background-color: #6ED8A7;
+  align-self: end;
+  padding: 20px
+}
+/* TODO - refactor this to remove duplication */
