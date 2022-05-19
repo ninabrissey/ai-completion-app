@@ -47,9 +47,7 @@ const QAForm = ({ setQA, QA }) => {
   const setUserText = async () => {
     try {
       const data = await postUserText();
-      console.log(data);
       const newQA = cleanAnswer(data, question);
-      console.log(newQA);
       setQA([newQA, ...QA]);
     } catch (err) {
       setError(err);
