@@ -5,9 +5,10 @@ const QACard = ({ qa }) => {
   useEffect(() => {}, [qa]);
 
   return (
-    <div className="qa-card">
-      {qa && <p className="display-linebreak">{qa}</p>}
-    </div>
+    <article className="qa-card">
+      {qa && <p className="question">{qa.question}</p>}
+      {qa && <p className="answer">{qa.answer}</p>}
+    </article>
   );
 };
 
