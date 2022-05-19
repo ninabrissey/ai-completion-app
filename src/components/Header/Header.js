@@ -5,12 +5,12 @@ import './Header.css';
 const Header = () => {
   return (
     <header>
-      <h1>Ask Your Frequently THOUGHT Questions</h1>
       <img
         className="logo"
         src={logo}
         alt="Frequently Thought Questions logo"
       />
+      <h1>Ask Your Frequently THOUGHT Questions</h1>
     </header>
   );
 };
