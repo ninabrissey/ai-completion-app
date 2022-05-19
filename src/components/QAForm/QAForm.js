@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 import './QAForm.css';
 
 const QAForm = ({ setQA, QA }) => {
   const [question, setQuestion] = useState('');
-  const [error, setError] = useState(''); // need to use this error
+  const [error, setError] = useState('');
+  const [intelligence, setIntelligence] = useState('text-curie-001');
 
   const data = {
     prompt: question,
@@ -21,7 +26,7 @@ const QAForm = ({ setQA, QA }) => {
 
   const postUserText = async () => {
     return await fetch(
-      'https://api.openai.com/v1/engines/text-curie-001/completions',
+      `https://api.openai.com/v1/engines/${intelligence}/completions`,
       {
         method: 'POST',
         headers: {
@@ -59,6 +64,26 @@ const QAForm = ({ setQA, QA }) => {
         maxWidth: '80%',
       }}
     >
+      <p>Select your openAI assistant's intelligence level ⬇️</p>
+      <FormControl required sx={{ m: 1, minWidth: 200, marginBottom: 4 }}>
+        <InputLabel id="intelligence-level-required-label">
+          Select Intelligence
+        </InputLabel>
+        <Select
+          labelId="intelligence-level-required-label"
+          id="intelligence-level-required"
+          value={intelligence}
+          label="Select intelligence Level *"
+          onChange={(e) => setIntelligence(e.target.value)}
+        >
+          <MenuItem value={'text-davinci-002'}>Super Intellegent</MenuItem>
+          <MenuItem value={'text-curie-001'}>Intellegent</MenuItem>
+          <MenuItem value={'text-babbage-001'}>Mildly Intellegent</MenuItem>
+          <MenuItem value={'text-ada-001'}>
+            Let's not be mean. Still very smart.
+          </MenuItem>
+        </Select>
+      </FormControl>
       <TextField
         fullWidth
         label="Ask your frequently thought question here..."
