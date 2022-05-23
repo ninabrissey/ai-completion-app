@@ -1,4 +1,4 @@
-<div align="center"><h1>Your EPK</h1>
+<div align="center"><h1>FTQ</h1>
 <p>An application to ask your FTQ - Frequently Thought Questions</p>
 <a href="https://main--ftq-frequently-thought-questions.netlify.app/">View Deployed Site Here</a>
 </div> 
