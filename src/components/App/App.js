@@ -8,9 +8,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <p>Are you frequently asking yourself questions...?</p>
-      <p>Well, get those questions out of your mind and onto the screen.</p>
-      <p>
+      <p className="text">Are you frequently asking yourself questions...?</p>
+      <p className="text">
+        Well, get those questions out of your mind and onto the screen.
+      </p>
+      <p className="text">
         The openAI assistant will hopefully be able to help you out in a small
         or big way...
       </p>
