@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { cleanAnswer } from '../../utils/cleaner';
+import { postUserText } from '../../utils/apiCalls';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -14,39 +15,15 @@ const QAForm = ({ setQA, QA }) => {
   const [error, setError] = useState('');
   const [intelligence, setIntelligence] = useState('text-curie-001');
 
-  const data = {
+  const questionData = {
     prompt: question,
-    max_tokens: 50,
+    max_tokens: 250,
     temperature: 1,
-    // top_p: 1,
-    // n: 1,
-    // stream: false,
-    // logprobs: null,
-  };
-
-  const postUserText = async () => {
-    return await fetch(
-      `https://api.openai.com/v1/engines/${intelligence}/completions`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-        },
-        body: JSON.stringify(data),
-      }
-    ).then((res) => {
-      if (res.ok) {
-        return res.json();
-      } else {
-        return Promise.reject(res.status);
-      }
-    });
   };
 
   const setUserText = async () => {
     try {
-      const data = await postUserText();
+      const data = await postUserText(intelligence, questionData);
       const newQA = cleanAnswer(data, question);
       setQA([newQA, ...QA]);
     } catch (err) {
@@ -64,7 +41,10 @@ const QAForm = ({ setQA, QA }) => {
         maxWidth: '80%',
       }}
     >
-      <p>Select your openAI assistant's intelligence level ⬇️</p>
+      <p>
+        Select your openAI assistant's intelligence level and then type your
+        question!
+      </p>
       <FormControl required sx={{ m: 1, minWidth: 200, marginBottom: 4 }}>
         <InputLabel id="intelligence-level-required-label">
           Select Intelligence
@@ -90,13 +70,14 @@ const QAForm = ({ setQA, QA }) => {
         id="fullWidth"
         multiline
         rows={8}
-        color="success"
         onChange={(e) => setQuestion(e.target.value)}
       />
       <Button
+        sx={{
+          background: '#12C39A',
+        }}
         className="submit-btn"
         variant="contained"
-        color="success"
         onClick={setUserText}
       >
         SUBMIT
