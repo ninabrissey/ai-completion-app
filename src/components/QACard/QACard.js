@@ -6,8 +6,18 @@ const QACard = ({ qa }) => {
 
   return (
     <article className="qa-card">
-      {qa && <p className="question">{qa.question}</p>}
-      {qa && <p className="answer">{qa.answer}</p>}
+      {qa && (
+        <div className="question">
+          <p className="you-label-text">You</p>
+          <p>{qa.question}</p>
+        </div>
+      )}
+      {qa && (
+        <div className="answer">
+          <p>{qa.answer}</p>
+          <p className="open-ai-label-text">openAI Assistant</p>
+        </div>
+      )}
     </article>
   );
 };
