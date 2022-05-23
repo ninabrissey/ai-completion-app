@@ -14,7 +14,7 @@ const QAContainer = () => {
       {QA && (
         <div className="qa-card-container">
           {QA.map((qa) => {
-            return <QACard key={qa.id} qa={qa.choices[0].text} />;
+            return <QACard key={qa.id} qa={qa} />;
           })}
         </div>
       )}

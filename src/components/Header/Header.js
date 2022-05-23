@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../ftc-logo-transparent.png';
+import logo from '../../ftq-logo-transparent.png';
 import './Header.css';
 
 const Header = () => {

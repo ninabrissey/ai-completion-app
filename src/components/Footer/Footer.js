@@ -9,7 +9,7 @@ const Footer = () => {
         href="https://beta.openai.com/"
         target="_blank"
       >
-        <p>to find out more about openAI click here</p>
+        <p>To find out more about openAI click here</p>
       </a>
     </footer>
   );

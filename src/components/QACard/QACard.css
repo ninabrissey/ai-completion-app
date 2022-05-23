@@ -1,10 +1,47 @@
 .qa-card {
-  width: 80vw;
-  border: .5px solid rgb(48, 41, 41);
-  border-radius: 3px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.display-linebreak {
-  white-space: pre-line;
+.question {
+  display: flex;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  margin-left: 10vw;
+  max-width: 60%;
+  background-color: #84BEF6;
+  align-self: start;
+  padding: 20px
 }
+
+.answer {
+  display: flex;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  margin-right: 10vw; 
+  max-width: 60%;
+  background-color: #12C39A;
+  align-self: end;
+  padding: 20px
+}
+
+.open-ai-logo {
+  height: 40px;
+  width: 40px;
+  margin-top:5px
+}
+
+.you-label-text {
+  align-self: center;
+  color: white;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.open-ai-label-text {
+  align-self: center;
+  color: white;
+  margin-left: 15px;
+  font-weight: bold;
+}
+/* TODO - refactor this to remove duplication */

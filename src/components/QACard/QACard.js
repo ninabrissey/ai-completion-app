@@ -5,9 +5,20 @@ const QACard = ({ qa }) => {
   useEffect(() => {}, [qa]);
 
   return (
-    <div className="qa-card">
-      {qa && <p className="display-linebreak">{qa}</p>}
-    </div>
+    <article className="qa-card">
+      {qa && (
+        <div className="question">
+          <p className="you-label-text">You</p>
+          <p>{qa.question}</p>
+        </div>
+      )}
+      {qa && (
+        <div className="answer">
+          <p>{qa.answer}</p>
+          <p className="open-ai-label-text">openAI Assistant</p>
+        </div>
+      )}
+    </article>
   );
 };
 

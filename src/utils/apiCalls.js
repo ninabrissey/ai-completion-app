@@ -1,15 +1,13 @@
-require('dotenv').config();
-
-export const postUserText = async () => {
+export const postUserText = async (intelligence, questionData) => {
   return await fetch(
-    'https://api.openai.com/v1/engines/text-curie-001/completions',
+    `https://api.openai.com/v1/engines/${intelligence}/completions`,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.OPENAI_SECRET}`,
+        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(questionData),
     }
   ).then((res) => {
     if (res.ok) {
