@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+<div align="center"><h1>Your EPK</h1>
+<p>An application to ask your FTQ - Frequently Thought Questions</p>
+<a href="https://main--ftq-frequently-thought-questions.netlify.app/">View Deployed Site Here</a>
+</div> 
+ 
+---
+### Summary
+FTQ is an application that allows a user to as questions using the openAI API. There is a drop-down that allows you to select from four different intelligence levels, so have fun exploring what the different levels of intellegence will give you for the same answer!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+### Tech Used
+React | HTML5 | CSS | React MUI 
 
-## Available Scripts
+<p text-align="center"> 
+    <img alt="React Badge" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+    <img alt="TypeScript Badge" src="https://img.shields.io/badge/html5-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+    <img alt="Sass" src="https://img.shields.io/badge/css-CC6699?style=for-the-badge&logo=cass&logoColor=white" />
+    <img alt="React Material UI" src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=whitee" />
+</p>
 
-In the project directory, you can run:
+---
+### Running this application locally
+1. Clone down this repo 
+2. Then ```cd``` into the directory
+3. Run ```npm install```
+4. Run ```npm start```
+5. Paste this: ```http://localhost:3000/``` into your browser
 
-### `npm start`
+---
+### Current Features
+- A user ask any of their frequently thought questions and receive a response. 
+- A user can select the intellegence level of the AI assistance in order to get differing opinions. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+### Future Features & Noteworthy Limitations
+- Local storage - this would allows a user's questions and answers to persist on page refresh. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
+### Preview
+![ftq-comedian](https://user-images.githubusercontent.com/80136642/169738797-7a5a0482-c28a-4cd7-b287-5e36a3484429.gif)
 
-### `npm test`
+---
+### Organizational Tools
+[GitHub Project Board](https://github.com/ninabrissey/ai-completion-app/projects/1) •
+[Wireframe](https://miro.com/app/board/uXjVO0Zzvec=/?share_link_id=354247666503) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+### Contributors:
+#### Frontend Team
+- Nina Brissey | [GitHub](https://github.com/ninabrissey) | [LinkedIn](https://www.linkedin.com/in/ninabrissey/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
