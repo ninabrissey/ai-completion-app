@@ -4,22 +4,44 @@
 }
 
 .question {
+  display: flex;
   border-radius: 3px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  max-width: 75%;
-  background-color: #F6F7F8;
+  margin-bottom: 15px;
+  margin-left: 10vw;
+  max-width: 60%;
+  background-color: #84BEF6;
   align-self: start;
   padding: 20px
 }
 
 .answer {
+  display: flex;
   border-radius: 3px;
-  margin-bottom: 10px;
-  margin-right: 10px; 
-  max-width: 75%;
-  background-color: #6ED8A7;
+  margin-bottom: 15px;
+  margin-right: 10vw; 
+  max-width: 60%;
+  background-color: #12C39A;
   align-self: end;
   padding: 20px
+}
+
+.open-ai-logo {
+  height: 40px;
+  width: 40px;
+  margin-top:5px
+}
+
+.you-label-text {
+  align-self: center;
+  color: white;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.open-ai-label-text {
+  align-self: center;
+  color: white;
+  margin-left: 15px;
+  font-weight: bold;
 }
 /* TODO - refactor this to remove duplication */
